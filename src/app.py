@@ -8,6 +8,7 @@ import dash_bootstrap_components as dbc
 
 #%% assign data variables
 adf = pd.read_excel('gamechangerdata.xlsx', sheet_name='all')
+print(adf)
 #%%init
 # Initialize the app
 app = Dash(__name__, 
