@@ -7,7 +7,7 @@ import plotly.express as px
 import dash_bootstrap_components as dbc
 
 #%% assign data variables
-adf = pd.read_excel('/Users/alicia/Desktop/gamechanger/src/gamechangerdata.xlsx', sheet_name='all')
+adf = pd.read_excel('gamechangerdata.xlsx', sheet_name='all')
 #%%init
 # Initialize the app
 app = Dash(__name__, 
