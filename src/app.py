@@ -4,11 +4,18 @@
 from dash import Dash, html, dash_table, dcc, callback, Output, Input
 import pandas as pd
 import plotly.express as px
+import dash_bootstrap_components as dbc
+
 #%% assign data variables
-adf = pd.read_excel('gamechangerdata.xlsx', sheet_name='all')
+adf = pd.read_excel('/Users/alicia/Desktop/gamechanger/src/gamechangerdata.xlsx', sheet_name='all')
 #%%init
 # Initialize the app
-app = Dash(__name__, update_title="Game Changer Data")
+app = Dash(__name__, 
+        update_title="Game Changer Data",
+         external_stylesheets=[dbc.themes.BOOTSTRAP],
+    meta_tags=[
+        {"name": "viewport", "content": "width=device-width, initial-scale=1"}
+    ],)
 server = app.server
 #%% app layout
 app.layout = html.Div([
