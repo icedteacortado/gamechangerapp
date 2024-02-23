@@ -8,7 +8,7 @@ import dash_bootstrap_components as dbc
 
 #%% assign data variables
 adf = pd.read_csv('src/gamechangerdata.csv', encoding='utf-8')
-print(adf)
+
 #%%init
 # Initialize the app
 app = Dash(__name__, 
