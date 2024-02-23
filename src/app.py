@@ -7,7 +7,7 @@ import plotly.express as px
 import dash_bootstrap_components as dbc
 
 #%% assign data variables
-adf = pd.read_csv('gamechangerdata.csv')
+adf = pd.read_csv('src/gamechangerdata.csv')
 print(adf)
 #%%init
 # Initialize the app
