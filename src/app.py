@@ -5,11 +5,32 @@ from dash import Dash, html, dash_table, dcc, callback, Output, Input
 import pandas as pd
 import plotly.express as px
 #%% assign data variables
-adf = pd.read_excel('gamechangerdata.xlsx', sheet_name='all')
+adf = pd.read_excel('src/gamechangerdata.xlsx', sheet_name='all')
 #%%init
 # Initialize the app
 app = Dash(__name__, update_title="Game Changer Data")
 server = app.server
+app.index_string = '''
+<!DOCTYPE html>
+<html>
+    <head>
+        {%metas%}
+        <title>{%title%}</title>
+        {%favicon%}
+        {%css%}
+    </head>
+    <body>
+        <div>Game Changer Data</div>
+        {%app_entry%}
+        <footer>
+            {%config%}
+            {%scripts%}
+            {%renderer%}
+        </footer>
+        <div>My Custom footer</div>
+    </body>
+</html>
+'''
 #%% app layout
 app.layout = html.Div([
     dash_table.DataTable(id='datatable',
