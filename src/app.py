@@ -5,7 +5,7 @@ from dash import Dash, html, dash_table, dcc, callback, Output, Input
 import pandas as pd
 import plotly.express as px
 #%% assign data variables
-adf = pd.read_excel('src/gamechangerdata.xlsx', sheet_name='all')
+adf = pd.read_excel('gamechangerdata.xlsx', sheet_name='all')
 #%%init
 # Initialize the app
 app = Dash(__name__, update_title="Game Changer Data")
